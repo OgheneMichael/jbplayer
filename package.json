@@ -1,0 +1,25 @@
+{
+	"name": "jbplayer",
+	"version": "1.0.0",
+	"description": "Open source wordpress plugin",
+	"main": "index.js",
+	"scripts": {
+		"start": "parcel src/index.html",
+		"prebuild": "rm -rf docs/*",
+		"build": "parcel build src/index.html --public-url /jbplayer/ --out-dir docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/OgheneMichael/jbplayer.git"
+	},
+	"author": "Oghene Michael",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/OgheneMichael/jbplayer/issues"
+	},
+	"homepage": "https://github.com/OgheneMichael/jbplayer#readme",
+	"devDependencies": {
+		"parcel-bundler": "^1.11.0",
+		"sass": "^1.16.1"
+	}
+}
