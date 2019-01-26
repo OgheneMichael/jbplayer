@@ -17,11 +17,11 @@ const playAudio = () => {
 	}
 };
 
-audio.onended = () => {
-	playerWrapper.classList.remove("isPlaying");
-	clearTimeout(timer);
-	renderPlayIcon();
-};
+// audio.onended = () => {
+// 	playerWrapper.classList.remove("isPlaying");
+// 	clearTimeout(timer);
+// 	renderPlayIcon();
+// };
 
 let timer;
 let percent = 0;
