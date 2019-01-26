@@ -17,11 +17,11 @@ const playAudio = () => {
 	}
 };
 
-// audio.onended = () => {
-// 	playerWrapper.classList.remove("isPlaying");
-// 	clearTimeout(timer);
-// 	renderPlayIcon();
-// };
+audio.onended = () => {
+	playerWrapper.classList.remove("isPlaying");
+	clearTimeout(timer);
+	renderPlayIcon();
+};
 
 let timer;
 let percent = 0;
@@ -41,10 +41,8 @@ const startTimer = (duration, element) => {
 	}
 };
 
-document
-	.querySelector(".jbplayer__controls")
-	.addEventListener("click", event => {
-		if (event.target.matches('[data-handle="play"], [data-handle="play"] *')) {
-			playAudio();
-		}
-	});
+controller.addEventListener("click", event => {
+	if (event.target.matches('[data-handle="play"], [data-handle="play"] *')) {
+		playAudio();
+	}
+});
