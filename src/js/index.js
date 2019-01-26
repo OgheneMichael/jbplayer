@@ -41,8 +41,10 @@ const startTimer = (duration, element) => {
 	}
 };
 
-controller.addEventListener("click", event => {
-	if (event.target.matches('[data-handle="play"], [data-handle="play"] *')) {
-		playAudio();
-	}
-});
+document
+	.querySelector(".jbplayer__controls")
+	.addEventListener("click", event => {
+		if (event.target.matches('[data-handle="play"], [data-handle="play"] *')) {
+			playAudio();
+		}
+	});
