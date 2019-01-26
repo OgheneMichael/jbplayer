@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "parcel src/index.html",
 		"prebuild": "rm -rf docs/*",
-		"build": "parcel build src/index.html --public-url /jbplayer/ --out-dir docs"
+		"build": "parcel build src/index.html --out-dir prod"
 	},
 	"repository": {
 		"type": "git",
