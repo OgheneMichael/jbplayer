@@ -9,8 +9,16 @@
 		<section class="jbp__body">
 			<div class="jbplayer">
 				<div class="jbplayer__wrapper">
-					<div class="jbplayer__details">
-						<div class="jbplayer__details--inner">
+					<div class="jbplayer__inner">
+						<progress class="jbplayer__progress" value="0" max="1"></progress>
+						<div class="jbplayer__image">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/en/a/a8/Florence_and_the_Machine_-_MTV_Unplugged.png"
+								alt="Cover Art"
+							/>
+						</div>
+
+						<div class="jbplayer__details">
 							<div class="jbplayer__details--track">
 								<div class="jbplayer__details--track-artist">
 									Florence + the Machine
@@ -19,39 +27,53 @@
 									What the Water Gave Me
 								</div>
 							</div>
-							<progress class="jbplayer__progress" value="0" max="1"></progress>
-						</div>
-					</div>
-					<div class="jbplayer__inner">
-						<div class="jbplayer__image">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/en/a/a8/Florence_and_the_Machine_-_MTV_Unplugged.png"
-								alt="Cover Art"
-							/>
-						</div>
-						<div class="jbplayer__controls">
-							<div class="jbplayer__controls--play" data-handle="play">
-								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="23">
-									<path
-										fill="#5D91BF"
-										fill-rule="evenodd"
-										d="M19.472 10.404L1.895.257C.93-.301.129.082.015 1.097A2.28 2.28 0 0 0 0 1.351V21.65c0 1.202.853 1.694 1.894 1.094l17.243-9.958.336-.194c1.042-.6 1.042-1.585 0-2.188z"
-									/>
-								</svg>
+							<div class="jbplayer__controls">
+								<div class="jbplayer__controls--play" data-handle="play">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="21"
+										height="23"
+									>
+										<path
+											fill="#000000"
+											fill-rule="evenodd"
+											d="M19.472 10.404L1.895.257C.93-.301.129.082.015 1.097A2.28 2.28 0 0 0 0 1.351V21.65c0 1.202.853 1.694 1.894 1.094l17.243-9.958.336-.194c1.042-.6 1.042-1.585 0-2.188z"
+										/>
+									</svg>
+								</div>
+
+								<div class="jbplayer__controls--downloads">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="22"
+										height="23"
+									>
+										<g fill="#000" fill-rule="nonzero">
+											<path
+												d="M16.467 10.484a.717.717 0 0 0-.654-.421h-2.876V.719A.719.719 0 0 0 12.22 0H9.344a.719.719 0 0 0-.719.719v9.344H5.75a.72.72 0 0 0-.54 1.191l5.03 5.75a.716.716 0 0 0 1.082 0l5.031-5.75a.717.717 0 0 0 .114-.77z"
+											/>
+											<path
+												d="M18.688 15.813v4.312H2.874v-4.313H0v5.75C0 22.358.644 23 1.438 23h18.687c.795 0 1.438-.643 1.438-1.438v-5.75h-2.875z"
+											/>
+										</g>
+									</svg>
+								</div>
+								<div class="jbplayer__controls--repeat">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="23"
+										fill="#000"
+									>
+										<path
+											d="M23.466 3.735L18.06.096a.444.444 0 0 0-.69.368V2.43H1.963c-.923 0-1.672.75-1.672 1.672v8.886h3.344v-7.21h13.728V7.75c0 .358.396.565.69.367l5.407-3.643a.445.445 0 0 0 .005-.74zM20.026 17.201H6.298v-1.966a.442.442 0 0 0-.69-.367L.195 18.506a.447.447 0 0 0 0 .74l5.407 3.643a.444.444 0 0 0 .69-.368V20.55h15.4c.923 0 1.672-.749 1.672-1.672V9.992H20.02v7.21h.005z"
+										/>
+									</svg>
+								</div>
 							</div>
-							<div class="jbplayer__controls--play-count">2000 Plays</div>
-							<div class="jbplayer__controls--downloads" title="3000 downloads">
-								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-									<g fill="#5D91BF" fill-rule="evenodd">
-										<path
-											d="M15.786 14.571H1.214a1.214 1.214 0 1 0 0 2.429h14.572a1.214 1.214 0 1 0 0-2.429z"
-										/>
-										<path
-											d="M8.5 0c-.67 0-1.214.544-1.214 1.214v6.782L5.962 6.68A1.214 1.214 0 0 0 4.25 8.39l3.39 3.397.031.02c.04.04.083.075.128.107l.048.037c.061.037.124.07.189.1.065.023.132.042.2.057.086.022.175.033.264.034.086-.001.171-.011.255-.03a1.36 1.36 0 0 0 .21-.061c.064-.03.127-.063.188-.1l.048-.037c.045-.032.088-.067.128-.106l.03-.021L12.75 8.39a1.214 1.214 0 0 0-1.712-1.712L9.714 7.996V1.214C9.714.544 9.171 0 8.5 0z"
-										/>
-									</g>
-								</svg>
-								3000
+							<div class="jbplayer__counts">
+								<span>Downloads: <strong>3000</strong></span>
+								<span>Plays: <strong>2000</strong></span>
 							</div>
 						</div>
 					</div>

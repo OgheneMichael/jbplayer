@@ -1,16 +1,17 @@
 %counts {
 	background: #efefef;
-	color: #5d91bf;
+	color: #000000;
 	padding: 5px;
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
-	min-width: 30%;
+	// min-width: 30%;
 	font-size: small;
 	justify-content: space-between;
 }
 
 body {
+	// background: #000000;
 	background: #efefef;
 }
 
@@ -39,75 +40,110 @@ img {
 	&.isPlaying {
 		.jbplayer__image {
 			box-shadow: 0 0px 27px rgba(0, 0, 0, 0.5);
-			transform: translateY(-55%) scale(0.95);
+			transform: scale(0.95);
+			border-radius: 50%;
 			& > img {
 				-webkit-animation: rotate 10s infinite linear;
 				animation: rotate 10s infinite linear;
 			}
 		}
-
+		/*
 		.jbplayer__details {
-			visibility: visible;
-			opacity: 1;
-			transform: translateY(0);
+			// visibility: visible;
+			// opacity: 1;
+			// transform: translateY(0);
+		}
+		*/
+	}
+
+	&__counts {
+		font-size: xx-small;
+		display: flex;
+		justify-content: flex-end;
+
+		& span:first-of-type {
+			padding-right: 5px;
+			margin-right: 5px;
+			border-right: 0.5px solid;
 		}
 	}
 
 	&__details {
 		position: relative;
+		flex: 0 0 70%;
+		max-width: 70%;
 		display: flex;
-		margin: 0 auto;
+		flex-direction: column;
+		justify-content: space-around;
+		// display: none;
+		// margin: 0 auto;
 		padding: 10px;
-		width: 90%;
+		// width: 100%;
 		min-height: 65px;
-		background: rgba($color: #5d91bf, $alpha: 0.5);
+		// background: rgba($color: #5d91bf, $alpha: 0.5);
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		transition: all 0.2s;
 		z-index: -1;
-		visibility: hidden;
-		opacity: 0;
-		transform: translateY(50%);
+		// visibility: hidden;
+		// opacity: 0;
+		// transform: translateY(50%);
 
 		&--inner {
 			width: 65%;
 			margin-left: auto;
+			margin-right: 10px;
 			border-radius: 5px;
 			line-height: 1.25;
 		}
 
 		&--track {
+			// padding: 0 15px;
 			&-artist {
 				font-weight: 700;
 				color: #111;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				width: 100%;
 			}
 
 			&-title {
 				font-size: smaller;
 				font-weight: 400;
 				color: #444;
+				margin-bottom: 5px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				width: 100%;
 			}
 		}
 	}
 
 	&__progress {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		// padding: 0 15px;
 		&[value] {
 			/* Reset the default appearance */
 			-webkit-appearance: none;
 			appearance: none;
-			height: 5px;
+			height: 10px;
 			width: 100%;
 
 			&::-webkit-progress-bar {
-				border-radius: 5px;
+				// border-radius: 5px;
 				background-color: #eee;
-				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+				// box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 			}
 
 			&::-webkit-progress-value {
-				background-color: #5d91bf;
+				background-color: #000000;
 				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-				border-radius: 5px;
+				// border-radius: 5px;
 			}
 		}
 	}
@@ -123,21 +159,25 @@ img {
 		font-family: inherit;
 		display: flex;
 		justify-content: space-between;
-		background: #ffffff;
+		// background: #ffffff;
+		background: #33abdd;
 		box-shadow: 0 2px 25px rgba($color: #000000, $alpha: 0.2);
-		border-radius: 10px;
+		// border-radius: 10px;
 		padding: 5px 10px;
 		min-height: 60px;
 		transform: translateY(-15%);
 	}
 
 	&__image {
-		position: absolute;
-		width: 120px;
-		height: 120px;
-		border-radius: 50%;
+		position: relative;
+		flex: 0 1 30%;
+		max-width: 30%;
+		// width: 120px;
+		// height: 120px;
+		margin-top: 5px;
+		border-radius: 0;
 		transition: all 0.2s;
-		transform: translateY(-50%) scale(0.8);
+		transform: scale(0.8);
 		box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
 		overflow: hidden;
 		background: #5d91bf;
@@ -145,30 +185,45 @@ img {
 
 	&__controls {
 		font-family: inherit;
-		margin-left: auto;
+		// margin-left: auto;
 		display: flex;
-		width: 65%;
-		padding: 0 5px;
-		justify-content: space-around;
+		// width: 65%;
+		// padding: 0 5px;
+		// justify-content: space-around;
 		align-items: center;
 
-		&--play {
-			display: flex;
-			position: relative;
+		& > *:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		& > * {
 			cursor: pointer;
-			order: 1;
+			display: flex;
+		}
+
+		&--play {
+			// display: flex;
+			position: relative;
+			// order: 1;
 
 			&-count {
 				@extend %counts;
-				order: 3;
+				// order: 3;
 			}
 		}
 
 		&--downloads {
-			margin: 0 5px;
-			order: 2;
-			@extend %counts;
-			cursor: pointer;
+			// margin: 0 5px;
+			// order: 2;
+			display: flex;
+			// @extend %counts;
+			// cursor: pointer;
+		}
+
+		&--repeat {
+			svg {
+				fill-opacity: 0.5;
+			}
 		}
 	}
 }
