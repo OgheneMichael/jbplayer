@@ -15,17 +15,17 @@ function initAudioPlayer() {
 	// audio.loop = true;
 	// audio.play();
 
-	// state.audio.onended = function() {
-	// 	if (state.playlist.tracks.length === state.nowPlaying.id) {
-	// 		playerWrapper.classList.remove("isPlaying");
-	// 		clearTimeout(timer);
-	// 		renderPlayIcon();
-	// 		setNextTrack();
-	// 	} else {
-	// 		setNextTrack(state.nowPlaying.id++);
-	// 		playAudio();
-	// 	}
-	// };
+	state.audio.onended = function() {
+		if (state.playlist.tracks.length === state.nowPlaying.id) {
+			playerWrapper.classList.remove("isPlaying");
+			clearTimeout(timer);
+			renderPlayIcon();
+			setNextTrack();
+		} else {
+			setNextTrack(state.nowPlaying.id++);
+			playAudio();
+		}
+	};
 }
 
 function playAudio() {
